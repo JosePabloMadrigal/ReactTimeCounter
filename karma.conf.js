@@ -1,13 +1,13 @@
-var webpackConfig = require('./webpack.config.js')
+var webpackConfig = require('./webpack.config.js');
 
-module.exports = function(config){
+module.exports = function (config) {
   config.set({
     browsers: ['Chrome'],
     singleRun: true,
     frameworks: ['mocha'],
     files: ['app/tests/**/*.test.jsx'],
     preprocessors: {
-      'app/tests/**/*.test.jsx': ['webpack','sourcemap']
+      'app/tests/**/*.test.jsx': ['webpack', 'sourcemap']
     },
     reporters: ['mocha'],
     client: {
@@ -16,7 +16,7 @@ module.exports = function(config){
       }
     },
     webpack: webpackConfig,
-    webpackServer:{
+    webpackServer: {
       noInfo: true
     }
   });
